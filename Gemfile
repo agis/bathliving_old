@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 
 gem 'thin'
-gem 'sqlite3'
 gem 'jquery-rails'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
