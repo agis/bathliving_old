@@ -1,17 +1,16 @@
-development:
+defaults: &defaults
   adapter: postgresql
-  database: bath_living_dev
   pool: 5
   timeout: 5000
+
+development:
+  database: bath_living_dev
+  <<: *defaults
 
 test:
-  adapter: postgresql
   database: bath_living_test
-  pool: 5
-  timeout: 5000
+  <<: *defaults
 
 production:
-  adapter: postgresql
   database: bath_living
-  pool: 5
-  timeout: 5000
+  <<: *defaults
