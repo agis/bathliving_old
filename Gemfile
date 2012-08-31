@@ -5,8 +5,19 @@ gem 'rails', '3.2.8'
 gem 'thin'
 gem 'jquery-rails'
 gem 'pg'
-
 gem 'activeadmin'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  # gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
