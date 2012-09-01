@@ -6,6 +6,7 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'pg'
 gem 'activeadmin'
+gem 'paperclip'
 
 group :development, :test do
   gem 'rspec-rails'
