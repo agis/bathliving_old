@@ -8,6 +8,6 @@ FactoryGirl.define do
   end
 
   factory :image do |f|
-    f.file { fixture_file_upload "#{Rails.root}/spec/fixtures/img.jpg", "image/jpg" }
+    f.file { fixture_file_upload "spec/fixtures/img.jpg", "image/jpg" }
   end
 end
