@@ -5,5 +5,6 @@ class Product < ActiveRecord::Base
 
   accepts_nested_attributes_for :images, allow_destroy: true
 
-  validates_presence_of :name, :description
+  validates_uniqueness_of :name
+  validates_presence_of :name, :description, :images
 end

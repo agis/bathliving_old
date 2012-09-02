@@ -12,4 +12,13 @@ describe Product do
   it "is invalid without a description" do
     FactoryGirl.build(:product, description: nil).should_not be_valid
   end
+
+  it "is invalid without images" do
+    FactoryGirl.build(:product, images: []).should_not be_valid
+  end
+
+  it "has a unique name" do
+    FactoryGirl.create(:product)
+    FactoryGirl.build(:product).should_not be_valid
+  end
 end
