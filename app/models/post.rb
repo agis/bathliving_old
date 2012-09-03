@@ -3,4 +3,6 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :content, :publish_date
   validates_uniqueness_of :title, :content
+
+  validates :publish_date, date: true
 end

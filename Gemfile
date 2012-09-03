@@ -5,8 +5,11 @@ gem 'rails', '3.2.8'
 gem 'thin'
 gem 'jquery-rails'
 gem 'pg'
-gem 'activeadmin'
-gem 'paperclip'
+
+gem 'activeadmin', '~> 0.5.0'
+gem 'paperclip', '~> 3.1.4'
+gem 'ckeditor', '~> 3.7.3'
+gem 'date_validator', '~> 0.6.3'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -35,4 +35,9 @@ describe Post do
     @post.publish_date = nil
     @post.should_not be_valid
   end
+
+  it "has a valid publish date" do
+    @post.publish_date = "a"
+    @post.should_not be_valid
+  end
 end
