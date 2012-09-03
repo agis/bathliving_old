@@ -30,4 +30,9 @@ describe Post do
     @post.content = 'hola'
     @post.should_not be_valid
   end
+
+  it "is invalid without a publish date" do
+    @post.publish_date = nil
+    @post.should_not be_valid
+  end
 end
