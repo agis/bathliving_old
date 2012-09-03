@@ -1,0 +1,1 @@
+UiDatePickerRails3.activate :active_admin
