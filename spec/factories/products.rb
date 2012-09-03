@@ -4,8 +4,4 @@ FactoryGirl.define do
     f.description "Some description goes here."
     f.images { [FactoryGirl.create(:image)] }
   end
-
-  factory :image do |f|
-    f.file { File.new("spec/fixtures/img.jpg") }
-  end
 end
