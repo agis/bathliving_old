@@ -77,6 +77,12 @@ module Bathliving
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
 
+    # Fix for Heroku rake assets:precompile failing during slug compilation
+    # http://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar#troubleshooting
     config.assets.initialize_on_precompile = false
+
+    # Fix for ActiveAdmin w/ Heroku Cedar Stack
+    # https://github.com/gregbell/active_admin/issues/483
+    config.assets.precompile += %w[ active_admin.css active_admin.js ]
   end
 end
