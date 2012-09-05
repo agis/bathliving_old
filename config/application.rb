@@ -83,6 +83,6 @@ module Bathliving
 
     # Fix for ActiveAdmin w/ Heroku Cedar Stack
     # https://github.com/gregbell/active_admin/issues/483
-    config.assets.precompile += %w[ active_admin.css active_admin.js ]
+    config.assets.precompile += %w[ active_admin.css active_admin.js print.css ]
   end
 end
