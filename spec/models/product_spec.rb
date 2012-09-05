@@ -9,8 +9,8 @@ describe Product do
     @product.should be_valid
   end
 
-  it "is invalid without a name" do
-    @product.name = " "
+  it "is invalid without a title" do
+    @product.title = " "
     @product.should_not be_valid
   end
 
@@ -24,9 +24,9 @@ describe Product do
     @product.should_not be_valid
   end
 
-  it "has a unique name" do
-    FactoryGirl.create(:product, name: 'hola')
-    @product.name = 'hola'
+  it "has a unique title" do
+    FactoryGirl.create(:product, title: 'hola')
+    @product.title = 'hola'
     @product.should_not be_valid
   end
 end
