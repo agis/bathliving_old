@@ -16,3 +16,5 @@
 
 # Ignore paperclip attachments from development
 /public/system
+
+/config/admins.yml
