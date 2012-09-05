@@ -1,8 +1,13 @@
 Bathliving::Application.routes.draw do
   ActiveAdmin.routes(self)
+
   mount Ckeditor::Engine => "/ckeditor"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  resources :products, only: [:show, :index]
+
+  root to: 'main#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
