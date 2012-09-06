@@ -13,3 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr.custom
+//= require respond.min
+//= require jquery.easing-1.3.min
+//= require jquery.fancybox.pack
+//= require jquery.smartStartSlider.min
+//= require jquery.jcarousel.min
+//= require jquery.cycle.all.min
+//= require jquery.isotope.min
+//= require jquery.touchSwipe.min
+//= require custom

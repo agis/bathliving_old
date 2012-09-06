@@ -1,17 +1,14 @@
 <!--[if !lte IE 6]><!-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="assets/jquery-1.7.1.min.js"><\/script>')</script>
-  <!--[if lt IE 9]> <script src="assets/selectivizr-and-extra-selectors.min.js"></script> <![endif]-->
-  <script src="assets/respond.min.js"></script>
-  <script src="assets/jquery.easing-1.3.min.js"></script>
-  <script src="assets/jquery.fancybox.pack.js"></script>
-  <script src="assets/jquery.smartStartSlider.min.js"></script>
-  <script src="assets/jquery.jcarousel.min.js"></script>
-  <script src="assets/jquery.cycle.all.min.js"></script>
-  <script src="assets/jquery.isotope.min.js"></script>
-  <script src="assets/audioplayerv1.min.js"></script>
-  <script src="//maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="assets/jquery.gmap.min.js"></script>
-  <script src="assets/jquery.touchSwipe.min.js"></script>
-  <script src="assets/custom.js"></script>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'selectivizr-and-extra-selectors.min' %>
+  <![endif]-->
+  <%= javascript_include_tag 'respond.min',
+                             'jquery.easing-1.3.min.js',
+                             'jquery.fancybox.pack.js',
+                             'jquery.smartStartSlider.min.js',
+                             'jquery.jcarousel.min.js',
+                             'jquery.cycle.all.min.js',
+                             'jquery.isotope.min.js',
+                             'jquery.touchSwipe.min.js',
+                             'custom.js' %>
 <!--<![endif]-->
