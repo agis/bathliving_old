@@ -12,6 +12,7 @@ gem 'paperclip', '~> 3.1.4'
 gem 'ckeditor', '~> 3.7.3'
 gem 'date_validator', '~> 0.6.3'
 gem 'ui_datepicker-rails3'
+gem 'aws-sdk', '~> 1.6.5'
 
 group :development, :test do
   gem 'rspec-rails'
