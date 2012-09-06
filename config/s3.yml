@@ -9,3 +9,7 @@ development:
 production:
   bucket: bathliving
   <<: *defaults
+
+test:
+  bucket: bathliving-test
+  <<: *defaults
