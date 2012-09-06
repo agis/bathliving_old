@@ -5,10 +5,6 @@ describe Composition do
     @composition = build(:composition)
   end
 
-  it "has a valid factory" do
-    @composition.should be_valid
-  end
-
   it "is invalid without a title" do
     @composition.title = " "
     @composition.should_not be_valid
