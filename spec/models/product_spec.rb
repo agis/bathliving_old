@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Product do
   before :each do
-    @product = FactoryGirl.build(:product)
+    @product = build(:product)
   end
 
   it "has a valid factory" do
@@ -25,7 +25,7 @@ describe Product do
   end
 
   it "has a unique title" do
-    FactoryGirl.create(:product, title: 'hola')
+    create(:product, title: 'hola')
     @product.title = 'hola'
     @product.should_not be_valid
   end

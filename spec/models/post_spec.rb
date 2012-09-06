@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Post do
   before :each do
-    @post = FactoryGirl.build(:post)
+    @post = build(:post)
   end
 
   it "has a valid factory" do
@@ -26,7 +26,7 @@ describe Post do
   end
 
   it "has unique content" do
-    FactoryGirl.create(:post, content: 'hola')
+    create(:post, content: 'hola')
     @post.content = 'hola'
     @post.should_not be_valid
   end

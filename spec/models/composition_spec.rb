@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Composition do
   before :each do
-    @composition = FactoryGirl.build(:composition)
+    @composition = build(:composition)
   end
 
   it "has a valid factory" do
@@ -25,7 +25,7 @@ describe Composition do
   end
 
   it "has a unique title" do
-    FactoryGirl.create(:composition, title: 'hola')
+    create(:composition, title: 'hola')
     @composition.title = 'hola'
     @composition.should_not be_valid
   end
