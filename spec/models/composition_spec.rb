@@ -25,7 +25,9 @@ describe Composition do
   end
 
   it "has a unique title" do
-    create(:composition, title: 'hola')
+    existing_composition = build(:composition, title: 'hola', images: [])
+    existing_composition.save(validate: false)
+
     @composition.title = 'hola'
     @composition.should_not be_valid
   end
