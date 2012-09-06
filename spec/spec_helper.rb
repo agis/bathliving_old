@@ -37,4 +37,8 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Mix-in FG's methods so you don't have to call FactoryGirl in the tests
+  # http://robots.thoughtbot.com/post/19162390206/short-explicit-test-setups
+  config.include FactoryGirl::Syntax::Methods
 end
