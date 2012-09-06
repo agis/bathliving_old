@@ -1,15 +1,4 @@
-defaults: &defaults
+production:
   access_key_id: AKIAJS5LXFFIXGEZFL3A
   secret_access_key: 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
-
-development:
-  bucket: bathliving-dev
-  <<: *defaults
-
-production:
   bucket: bathliving
-  <<: *defaults
-
-test:
-  bucket: bathliving-test
-  <<: *defaults

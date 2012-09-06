@@ -25,9 +25,7 @@ describe Product do
   end
 
   it "has a unique title" do
-    existing_product = build(:product, title: 'hola', images: [])
-    existing_product.save(validate: false)
-
+    create(:product, title: 'hola')
     @product.title = 'hola'
     @product.should_not be_valid
   end
