@@ -1,4 +1,8 @@
+# encoding: utf-8
+
 ActiveAdmin.register Post do
+  menu label: "Άρθρα"
+
   form do |f|
     f.inputs do
       f.input :title

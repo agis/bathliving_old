@@ -1,4 +1,8 @@
+# encoding: utf-8
+
 ActiveAdmin.register Composition do
+  menu label: "Συνθέσεις"
+
   form multipart: true do |f|
     f.inputs "Basic Information" do
       f.input :title
