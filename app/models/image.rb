@@ -8,8 +8,8 @@ class Image < ActiveRecord::Base
 
   validates_attachment :file,
                         presence: true,
-                        size: { in: 0..600.kilobytes }
-                        # TODO: add content-type validation
+                        size: { in: 0..600.kilobytes },
+                        content_type: { content_type: 'image/jpeg' }
 
   # TODO: styles must depend on the parent object eg. Image or Composition?
   # see https://github.com/thoughtbot/paperclip#dynamic-configuration
