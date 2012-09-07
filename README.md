@@ -1,11 +1,16 @@
+Images' sizes
+------------------
+* Product index: 220x171
+* Product show:  680x530
+
 TODO
------------
-* Only load required JS files
+------------------------
+* Only load required JS plugins
 * Measure performance
 * Implement caching
-* Remove test admin user and create new ones (after depl.)
+* Remove test admin user and create new ones (after deployment)
 
 Consider
------------
+--------------------
 * Using Markdown or Textile
-* Use a template engine (Mustache or Slim)
+* Using a template engine (Mustache or Slim)

@@ -1,0 +1,32 @@
+<article class="single-project">
+
+  <header class="page-header">
+
+    <h1 class="page-title align-left">Προϊόντα</h1>
+
+    <a href="portfolio-4-columns.html" class="button no-bg medium align-right">
+      Όλα τα προϊόντα <img src="img/icon-grid.png" alt="" class="icon">
+    </a>
+
+    <hr />
+
+    <h2 class="project-title">
+      <%= @product.title %>
+    </h2>
+
+    <ul class="portfolio-pagination">
+      <li class="prev"><a href="#" class="button medium no-bg"><span class="arrow left">&raquo;</span> Previous</a></li>
+      <li class="next"><a href="#" class="button medium no-bg">Next <span class="arrow">&raquo;</span></a></li>
+    </ul>
+
+  </header>
+
+  <div id="main">
+    <%= render 'image_slider' %>
+  </div>
+
+  <div id="sidebar">
+    <%= render 'show_sidebar' %>
+  </div>
+
+</article>
