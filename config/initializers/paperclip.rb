@@ -1,5 +1,6 @@
 if Rails.env == 'production'
   Paperclip::Attachment.default_options[:storage] = :s3
-  Paperclip::Attachment.default_options[:s3_credentials] = YAML.load_file("#{Rails.root}/config/s3.yml")
-  Paperclip::Attachment.default_options[:s3_host_name] = 's3-eu-west-1.amazonaws.com'
+  Paperclip::Attachment.default_options[:s3_credentials] = { access_key_id: ENV['S3_KEY'], secret_access_key: ENV['S3_SECRET'] }
+  Paperclip::Attachment.default_options[:s3_host_name] = ENV['S3_HOST']
+  Paperclip::Attachment.default_options[:bucket] = ENV['S3_BUCKET']
 end
