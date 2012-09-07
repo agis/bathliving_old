@@ -10,7 +10,7 @@ ActiveAdmin.register Post do
       f.input :content, :as => :ckeditor, :input_html => { :height => 600 }
     end
 
-    f.buttons
+    f.actions
   end
 
   # TODO: Improve views
