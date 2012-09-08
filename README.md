@@ -1,14 +1,14 @@
 Images' sizes
 ------------------
-* Product index: 220x171
-* Product show:  680x530
+* Product show:  680x540
+* Product index: 220x175
 
-TODO
+TODO after deployment
 ------------------------
 * Only load required JS plugins
 * Measure performance
 * Implement caching
-* Remove test admin user and create new ones (after deployment)
+* Remove test admin user and create new ones
 
 Consider
 --------------------
