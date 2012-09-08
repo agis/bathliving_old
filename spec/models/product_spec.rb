@@ -5,6 +5,10 @@ describe Product do
     @product = build(:product)
   end
 
+  it { should respond_to :title }
+  it { should respond_to :description  }
+  it { should respond_to :images }
+
   it "is invalid without a title" do
     @product.title = " "
     @product.should_not be_valid
