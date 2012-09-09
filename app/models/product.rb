@@ -1,10 +1,11 @@
 class Product < ActiveRecord::Base
-  attr_accessible :title, :description, :images, :images_attributes
+  attr_accessible :title, :description, :images, :images_attributes, :product_category_id
 
   has_many :images, as: :imageable
+  belongs_to :category, class_name: 'ProductCategory', foreign_key: :product_category_id
 
   accepts_nested_attributes_for :images, allow_destroy: true
 
   validates_uniqueness_of :title
-  validates_presence_of :title, :description, :images
+  validates_presence_of :title, :description, :images, :category
 end
