@@ -8,4 +8,6 @@ class Product < ActiveRecord::Base
 
   validates_uniqueness_of :title
   validates_presence_of :title, :description, :images, :category
+
+  default_scope order("id DESC")
 end
