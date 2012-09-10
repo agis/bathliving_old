@@ -8,7 +8,7 @@ describe CompositionsController do
   describe "GET #index" do
     it "assigns an array of products to @compositions" do
       get :index
-      assigns(:compositions).should eq [@composition]
+      assigns(:compositions).should eq [@composition] # test this with more compositions
     end
 
     it "renders the :index view" do
