@@ -7,11 +7,3 @@ AdminUser.create(
                 password: admin['password'],
                 password_confirmation: admin['password']
                 )
-
-ProductCategory.create([
-                        { title: 'Βρύσες' },
-                        { title: 'Πλακάκια' },
-                        { title: 'Νιπτήρες' },
-                        { title: 'Καμπίνες' },
-                        { title: 'Ντουζιέρες' }
-                      ])
