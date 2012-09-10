@@ -10,8 +10,8 @@ describe Post do
     @post.should_not be_valid
   end
 
-  it "is invalid without content" do
-    @post.content = " "
+  it "is invalid without body" do
+    @post.body = " "
     @post.should_not be_valid
   end
 
@@ -21,9 +21,9 @@ describe Post do
     @post.should_not be_valid
   end
 
-  it "has unique content" do
-    create(:post, content: 'hola')
-    @post.content = 'hola'
+  it "has unique body" do
+    create(:post, body: 'hola')
+    @post.body = 'hola'
     @post.should_not be_valid
   end
 
