@@ -22,7 +22,17 @@
   </header>
 
   <div id="main">
-    <%= render 'image_slider' %>
+    <div class="image-gallery-slider">
+
+      <ul>
+        <% @product.images.each do |image| %>
+          <li>
+            <%= image_tag image.file.url %>
+          </li>
+        <% end %>
+      </ul>
+
+    </div>
   </div>
 
   <div id="sidebar">
