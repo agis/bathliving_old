@@ -1,0 +1,31 @@
+<header id="header" class="container clearfix">
+
+  <%= link_to root_path, id: "logo", title: 'Αρχική σελίδα' do %>
+    <%= image_tag 'logo.png', alt: 'bathliving' %>
+  <% end %>
+
+  <nav id="main-nav">
+    <ul>
+      <li <%= current_controller('main') %>>
+        <%= link_to 'Αρχικη', root_path %>
+      </li>
+
+      <li <%= current_controller('products') %>>
+        <%= link_to 'Προϊοντα', products_path %>
+      </li>
+
+      <li <%= current_controller('posts') %>>
+        <%= link_to 'Blog', posts_path %>
+      </li>
+
+      <li <%= current_controller('compositions') %>>
+        <%= link_to 'Συνθεσεις', compositions_path %>
+      </li>
+
+      <li>
+        <a href="contact-us.html">Επικοινωνια</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
