@@ -5,4 +5,6 @@ class Post < ActiveRecord::Base
   validates_uniqueness_of :title, :body
 
   validates :publish_date, date: true
+
+  scope :published, where("publish_date <= ?", Date.current).order("publish_date DESC")
 end

@@ -1,1 +1,64 @@
-show a blog post
+<header class="page-header">
+  <h1 class="page-title">Blog</h1>
+</header>
+
+<section id="main">
+
+  <article class="entry single clearfix">
+
+    <%= link_to @post do %>
+      <img src="img/placeholders/blog-post-1.jpg" alt="" class="entry-image">
+    <% end %>
+
+    <div class="entry-body">
+
+      <a href="#">
+        <h1 class="title">
+          <%= raw(@post.title) %>
+        </h1>
+      </a>
+
+      <%= raw(@post.body) %>
+
+    </div>
+
+    <div class="entry-meta">
+      <ul>
+
+        <li>
+          <%= link_to @post do %>
+            <span class="post-format ">Permalink</span>
+          <% end %>
+        </li>
+
+        <li>
+          <em><%= @post.publish_date.to_formatted_s(:short) %></em>
+        </li>
+
+      </ul>
+    </div>
+
+  </article>
+
+  <section id="comments">
+    <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'bathliving'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+
+</section>
+
+<aside id="sidebar">
+  <%= render 'sidebar' %>
+</aside>

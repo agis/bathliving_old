@@ -5,11 +5,11 @@
   </a>
 
   <div class="entry-body">
-    <a href="single-post.html">
+    <%= link_to post do %>
       <h1 class="title">
         <%= post.title %>
       </h1>
-    </a>
+    <% end %>
 
     <%= raw(post.body) %>
   </div>
