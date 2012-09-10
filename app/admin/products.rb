@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+# TODO: translate
+
 ActiveAdmin.register Product do
   menu label: "Προϊόντα", priority: 1
 

@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+# TODO: translate
+
 ActiveAdmin.register Post do
   menu label: "Άρθρα", priority: 3
 

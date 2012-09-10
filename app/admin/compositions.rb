@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+# TODO: translate
+
 ActiveAdmin.register Composition do
   menu label: "Συνθέσεις", priority: 2
 
