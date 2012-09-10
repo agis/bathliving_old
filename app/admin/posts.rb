@@ -9,7 +9,7 @@ ActiveAdmin.register Post do
     f.inputs do
       f.input :title
       f.input :publish_date, as: :ui_date_picker
-      f.input :content, as: :ckeditor, input_html: { height: 600 }
+      f.input :body, as: :ckeditor, input_html: { height: 600 }
     end
 
     f.actions

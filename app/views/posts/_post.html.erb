@@ -1,0 +1,33 @@
+<article class="entry clearfix">
+
+  <a href="single-post.html" title="">
+    <img src="img/placeholders/blog-post-1.jpg" alt="" class="entry-image">
+  </a>
+
+  <div class="entry-body">
+    <a href="single-post.html">
+      <h1 class="title">
+        <%= post.title %>
+      </h1>
+    </a>
+
+    <%= raw(post.body) %>
+  </div>
+
+  <div class="entry-meta">
+    <ul>
+
+      <li>
+        <%= link_to post do %>
+          <span class="post-format ">Permalink</span>
+        <% end %>
+      </li>
+
+      <li>
+        <em><%= post.publish_date.to_formatted_s(:short) %></em>
+      </li>
+
+    </ul>
+  </div>
+
+</article>
