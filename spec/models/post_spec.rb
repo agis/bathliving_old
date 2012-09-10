@@ -5,6 +5,10 @@ describe Post do
     @post = build(:post)
   end
 
+  it { should respond_to :title }
+  it { should respond_to :body  }
+  it { should respond_to :publish_date }
+
   it "is invalid without a title" do
     @post.title = " "
     @post.should_not be_valid
