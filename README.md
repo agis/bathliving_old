@@ -3,8 +3,9 @@ Images' sizes
 * Product show:  680x540
 * Product index: 220x175
 
-TODO after deployment
+TODO
 ------------------------
+* Change the locale to el-GR
 * Only load required JS plugins
 * Measure performance
 * Implement caching
