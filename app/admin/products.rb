@@ -15,6 +15,7 @@ ActiveAdmin.register Product do
     f.inputs "Πληροφορίες" do
       f.input :title
       f.input :category
+      f.input :link
       f.input :description, as: :ckeditor, input_html: { height: 500 }
     end
 

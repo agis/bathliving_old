@@ -3,5 +3,7 @@
 <%= raw @product.description %>
 
 <p>
-  <a href="#" class="button">Περισσότερες πληροφορίες &rsaquo;</a>
+  <%= link_to @product.link, class: "button", target: "_blank" do %>
+    Περισσότερες πληροφορίες &rsaquo;
+  <% end %>
 </p>

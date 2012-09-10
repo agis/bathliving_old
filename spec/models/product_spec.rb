@@ -9,6 +9,7 @@ describe Product do
   it { should respond_to :description  }
   it { should respond_to :images }
   it { should respond_to :category }
+  it { should respond_to :link }
 
   it "is invalid without a title" do
     @product.title = " "
@@ -35,4 +36,6 @@ describe Product do
     @product.category = nil
     @product.should_not be_valid
   end
+
+  it "has a proper link"
 end
