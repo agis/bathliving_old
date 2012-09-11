@@ -6,6 +6,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @previous_product = neighboor(:previous)
+    @next_product = neighboor(:next)
   end
 
   private
@@ -20,4 +22,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  def neighboor(direction)
+    begin
+      return Product.find(params[:id].to_i + 1) if direction == :previous
+      return Product.find(params[:id].to_i - 1) if direction == :next
+    rescue
+      "#"
+    end
+  end
 end
