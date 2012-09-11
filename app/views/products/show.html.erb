@@ -4,9 +4,9 @@
 
     <h1 class="page-title align-left">Προϊόντα</h1>
 
-    <a href="portfolio-4-columns.html" class="button no-bg medium align-right">
-      Όλα τα προϊόντα <img src="img/icon-grid.png" alt="" class="icon">
-    </a>
+    <%= link_to products_path, class: "button no-bg medium align-right" do %>
+      Όλα τα προϊόντα <%= image_tag 'icon-grid.png', class: "icon" %>
+    <% end %>
 
     <hr />
 
