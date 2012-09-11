@@ -7,4 +7,6 @@ class Project < ActiveRecord::Base
 
   validates_uniqueness_of :title
   validates_presence_of :title, :description, :images
+
+  default_scope order("id DESC")
 end
