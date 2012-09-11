@@ -11,6 +11,7 @@ TODO
 * Implement caching
 * Remove test admin user and create new ones
 * Add indexes
+* Remove unused image assets
 
 Consider
 --------------------
