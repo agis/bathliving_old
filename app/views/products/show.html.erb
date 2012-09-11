@@ -15,8 +15,19 @@
     </h2>
 
     <ul class="portfolio-pagination">
-      <li class="prev"><a href="#" class="button medium no-bg"><span class="arrow left">&raquo;</span> Previous</a></li>
-      <li class="next"><a href="#" class="button medium no-bg">Next <span class="arrow">&raquo;</span></a></li>
+
+      <li class="prev">
+        <%= link_to @previous_product, class: "button medium no-bg" do %>
+          <span class="arrow left">&raquo;</span> Προηγούμενο
+        <% end %>
+      </li>
+
+      <li class="next">
+        <%= link_to @next_product, class: "button medium no-bg" do %>
+          Επόμενο <span class="arrow">&raquo;</span>
+        <% end %>
+      </li>
+
     </ul>
 
   </header>
@@ -36,7 +47,7 @@
   </div>
 
   <div id="sidebar">
-    <%= render 'show_sidebar' %>
+    <%= render 'sidebar' %>
   </div>
 
 </article>

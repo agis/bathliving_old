@@ -15,9 +15,9 @@ class ProductsController < ApplicationController
   def set_categories(products)
     @categories = []
 
-    products.each do |p|
-      unless @categories.include? p.category
-        @categories << p.category
+    products.each do |product|
+      unless @categories.include? product.category
+        @categories << product.category
       end
     end
   end
