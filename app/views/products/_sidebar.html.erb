@@ -1,6 +1,6 @@
 <h4>Περιγραφή</h4>
 
-<%= raw @product.description %>
+<%= markdown(@product.description) %>
 
 <p>
   <%= link_to @product.link, class: "button", target: "_blank" do %>

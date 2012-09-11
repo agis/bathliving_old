@@ -43,7 +43,7 @@ ActiveAdmin.register Product do
       f.input :title
       f.input :category
       f.input :link
-      f.input :description, as: :ckeditor, input_html: { height: 500 }
+      f.input :description
     end
 
     f.actions
