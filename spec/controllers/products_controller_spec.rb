@@ -3,18 +3,21 @@ require 'spec_helper'
 describe ProductsController do
   before :each do
     @product = create(:product)
+    @product2 = create(:product, title: 'abc')
   end
 
   describe "GET #index" do
-    it "assigns an array of products to @products" do
+    it "populates an array of products" do
       get :index
-      assigns(:products).should eq [@product]
+      assigns(:products).should eq [@product2, @product]
     end
 
     it "renders the :index view" do
       get :index
       response.should render_template 'index'
     end
+
+    it "populates an array of the categories"
   end
 
   describe "GET #show" do

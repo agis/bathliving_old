@@ -1,15 +1,17 @@
 <article class="one-fourth" data-categories="<%= product.category.title %>">
 
-  <%= image_tag product.images.first.file.url(:thumb) %>
+  <%= link_to product do %>
+    <%= image_tag product.images.first.file.url(:thumb) %>
 
-  <%= link_to product, class: "project-meta" do %>
-    <h5 class="title">
-      <%= product.title %>
-    </h5>
+    <div class="project-meta">
+      <h5 class="title">
+        <%= product.title %>
+      </h5>
 
-    <span class="categories">
-      <%= product.category.title %>
-    </span>
+      <span class="categories">
+        <%= product.category.title %>
+      </span>
+    </div>
   <% end %>
 
 </article>
