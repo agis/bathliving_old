@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :composition do |f|
-    f.title 'A composition title'
+  factory :project do |f|
+    f.title 'A project title'
     f.description 'Some description goes here.'
     f.images { [build(:image)] }
   end

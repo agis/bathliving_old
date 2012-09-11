@@ -23,5 +23,5 @@ class Image < ActiveRecord::Base
   end
 end
 
-# TODO: styles must depend on the parent object eg. Image or Composition?
+# TODO: styles must depend on the parent object eg. Image or Project?
 # see https://github.com/thoughtbot/paperclip#dynamic-configuration

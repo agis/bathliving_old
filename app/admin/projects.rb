@@ -2,8 +2,8 @@
 
 # TODO: translate
 
-ActiveAdmin.register Composition do
-  menu label: "Συνθέσεις", priority: 2
+ActiveAdmin.register Project do
+  menu priority: 2
 
   form multipart: true do |f|
     f.inputs "Εικόνες" do

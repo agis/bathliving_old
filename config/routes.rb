@@ -5,7 +5,7 @@ Bathliving::Application.routes.draw do
 
   resources :posts,        only: [:show, :index]
   resources :products,     only: [:show, :index]
-  resources :compositions, only: [:show, :index]
+  resources :projects,     only: [:show, :index]
 
   root to: 'main#home'
 end

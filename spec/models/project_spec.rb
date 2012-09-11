@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Composition do
+describe Project do
   before :each do
-    @composition = build(:composition)
+    @project = build(:project)
   end
 
   it { should respond_to :title }
@@ -10,31 +10,31 @@ describe Composition do
   it { should respond_to :images }
 
   it "is invalid without a title" do
-    @composition.title = " "
-    @composition.should_not be_valid
+    @project.title = " "
+    @project.should_not be_valid
   end
 
   it "is invalid without a description" do
-    @composition.description = " "
-    @composition.should_not be_valid
+    @project.description = " "
+    @project.should_not be_valid
   end
 
   it "is invalid without images" do
-    @composition.images = []
-    @composition.should_not be_valid
+    @project.images = []
+    @project.should_not be_valid
   end
 
   it "has a unique title" do
-    create(:composition, title: 'hola')
-    @composition.title = 'hola'
-    @composition.should_not be_valid
+    create(:project, title: 'hola')
+    @project.title = 'hola'
+    @project.should_not be_valid
   end
 
   it "is invalid if it contains an invalid image" do
     invalid_image = build(:image)
     invalid_image.file = File.new("spec/fixtures/image/content-type.gif")
 
-    @composition.images << invalid_image
-    @composition.should_not be_valid
+    @project.images << invalid_image
+    @project.should_not be_valid
   end
 end

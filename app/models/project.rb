@@ -1,4 +1,4 @@
-class Composition < ActiveRecord::Base
+class Project < ActiveRecord::Base
   attr_accessible :title, :description, :images, :images_attributes
 
   has_many :images, as: :imageable
