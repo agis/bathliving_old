@@ -15,7 +15,7 @@ ActiveAdmin.register Project do
     f.inputs "Πληροφορίες" do
       f.input :title,       label: 'Τίτλος',    hint: 'Με μικρά και τόνους'
       f.input :description, label: 'Περιγραφή',
-                            hint: '<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Οδηγίες σύνταξης</a>'.html_safe
+                            hint:   markdown_link
     end
 
     f.actions

@@ -1,3 +1,10 @@
+# encoding: utf-8
+
+def markdown_link
+  '<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">
+  Οδηγίες σύνταξης</a>'.html_safe
+ end
+
 ActiveAdmin.setup do |config|
 
   # == Site Title
@@ -10,7 +17,7 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
