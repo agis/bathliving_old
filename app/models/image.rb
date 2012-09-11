@@ -4,7 +4,7 @@ class Image < ActiveRecord::Base
   belongs_to :imageable, polymorphic: true
 
   has_attached_file :file,
-                     styles: { thumb: '220x175', thumb_big: '460x311' }
+                     styles: { thumb: '220x175#', thumb_big: '460x311#' }
 
   validates_attachment :file,
                         presence: true,
