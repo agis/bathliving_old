@@ -1,5 +1,4 @@
 # encoding: utf-8
-# TODO: translate
 
 include ApplicationHelper
 
@@ -44,7 +43,8 @@ ActiveAdmin.register Product do
       f.input :title,    label: 'Τίτλος', hint: 'Με μικρά και τόνους'
       f.input :category, label: 'Κατηγορία'
       f.input :link
-      f.input :description, label: 'Περιγραφή'
+      f.input :description, label: 'Περιγραφή',
+                            hint: '<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Οδηγίες σύνταξης</a>'.html_safe
     end
 
     f.actions

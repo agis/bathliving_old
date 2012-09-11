@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# TODO: translate
+include ApplicationHelper
 
 ActiveAdmin.register Project do
   menu priority: 2
@@ -8,13 +8,14 @@ ActiveAdmin.register Project do
   form multipart: true do |f|
     f.inputs "Εικόνες" do
       f.has_many :images do |p|
-        p.input :file, hint: p.template.image_tag(p.object.file.url(:thumb))
+        p.input :file, label: 'Εικόνα', hint: p.template.image_tag(p.object.file.url(:thumb))
       end
     end
 
     f.inputs "Πληροφορίες" do
-      f.input :title
-      f.input :description, as: :ckeditor, input_html: { height: 500 }
+      f.input :title,       label: 'Τίτλος',    hint: 'Με μικρά και τόνους'
+      f.input :description, label: 'Περιγραφή',
+                            hint: '<a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Οδηγίες σύνταξης</a>'.html_safe
     end
 
     f.actions
