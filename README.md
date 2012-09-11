@@ -1,9 +1,9 @@
 Images' sizes
 ------------------
-* Product show:  680x540
+* Product / Composition show:  680x540
 * Product thumb: 220x175
+* Project thumb: 460x311
 * Post main: 680x234
-* Post thumb: 460x311
 
 TODO
 ------------------------
@@ -14,6 +14,8 @@ TODO
 * Remove test admin user and create new ones
 * Add indexes
 * Remove unused image assets
+* Add DB constraints
+* Use quality options in Paperclip
 
 Consider
 --------------------
