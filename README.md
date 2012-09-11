@@ -2,6 +2,7 @@ Images' sizes
 ------------------
 * Product show:  680x540
 * Product index: 220x175
+* Post main: 680x234
 
 TODO
 ------------------------

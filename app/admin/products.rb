@@ -1,9 +1,10 @@
 # encoding: utf-8
-
 # TODO: translate
 
+include ApplicationHelper
+
 ActiveAdmin.register Product do
-  menu label: "Προϊόντα", priority: 1
+  menu label: 'Προϊόντα', priority: 1
 
   index do
     column :id
@@ -17,12 +18,12 @@ ActiveAdmin.register Product do
     attributes_table do
       row :title
 
-      row "First image" do
+      row 'Εικονα #1' do
         image_tag(product.images.first.file.url(:thumb))
       end
 
-      row :description do
-        raw(product.description)
+      row 'Περιγραφη' do
+        markdown(product.description)
       end
 
       row :link do
@@ -33,17 +34,17 @@ ActiveAdmin.register Product do
   end
 
   form multipart: true do |f|
-    f.inputs "Εικόνες" do
+    f.inputs 'Εικόνες' do
       f.has_many :images do |p|
-        p.input :file, hint: p.template.image_tag(p.object.file.url(:thumb))
+        p.input :file, label: 'Εικόνα', hint: p.template.image_tag(p.object.file.url(:thumb))
       end
     end
 
-    f.inputs "Πληροφορίες" do
-      f.input :title
-      f.input :category
+    f.inputs 'Πληροφορίες' do
+      f.input :title,    label: 'Τίτλος', hint: 'Με μικρά και τόνους'
+      f.input :category, label: 'Κατηγορία'
       f.input :link
-      f.input :description
+      f.input :description, label: 'Περιγραφή'
     end
 
     f.actions
