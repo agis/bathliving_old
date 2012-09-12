@@ -1,4 +1,4 @@
-Images' sizes
+Images sizes
 ------------------
 * Product / Composition show:  680x540
 * Product thumb: 220x175

@@ -15,10 +15,10 @@ class Image < ActiveRecord::Base
 
   private
 
-  def file_dimensions
+  def file_dimensions(width = 680, height = 540)
     dimensions = Paperclip::Geometry.from_file(file.queued_for_write[:original].path)
-    unless dimensions.width == 680 && dimensions.height == 540
-      errors.add(:file, 'Width must be 680px and height must be 540px')
+    unless dimensions.width == width && dimensions.height == height
+      errors.add :file, "Width must be #{width}px and height must be #{height}px"
     end
   end
 end

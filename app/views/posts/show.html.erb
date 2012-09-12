@@ -14,11 +14,11 @@
 
       <a href="#">
         <h1 class="title">
-          <%= raw(@post.title) %>
+          <%= @post.title %>
         </h1>
       </a>
 
-      <%= raw(@post.body) %>
+      <%= markdown(@post.body) %>
 
     </div>
 

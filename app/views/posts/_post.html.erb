@@ -11,7 +11,8 @@
       </h1>
     <% end %>
 
-    <%= raw(post.body) %>
+    <% # TODO: Limit text to some words %>
+    <%= markdown(post.body) %>
   </div>
 
   <div class="entry-meta">

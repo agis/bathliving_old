@@ -3,10 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 
 gem 'thin'
-gem 'jquery-rails'
-
 gem 'pg'
-
+gem 'jquery-rails'
 gem 'activeadmin', '~> 0.5.0'
 gem 'paperclip', '~> 3.1.4'
 gem 'aws-sdk', '~> 1.6.5'

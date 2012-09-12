@@ -8,6 +8,7 @@ describe Post do
   it { should respond_to :title }
   it { should respond_to :body  }
   it { should respond_to :publish_date }
+  it { should respond_to :image }
 
   it "is invalid without a title" do
     @post.title = " "

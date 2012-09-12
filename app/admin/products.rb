@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+# TODO: Show all images in #show
+
 include ApplicationHelper
 
 ActiveAdmin.register Product do
@@ -7,14 +9,16 @@ ActiveAdmin.register Product do
 
   index do
     column :id
-    column :title
-    column :created_at
-    column :updated_at
+    column 'Τίτλος',              :title
+    column 'Δημιουργήθηκε στις',  :created_at
+    column 'Ανανεώθηκε στις',     :updated_at
     default_actions
   end
 
   show do |product|
     attributes_table do
+      row :id
+
       row :title
 
       row 'Εικονα #1' do
@@ -28,19 +32,24 @@ ActiveAdmin.register Product do
       row :link do
         link_to product.link, product.link, target: "_blank"
       end
+
+      row ' ' do
+        link_to 'Προβολή στο site', product, target: "_blank"
+      end
     end
+
     active_admin_comments
   end
 
   form multipart: true do |f|
     f.inputs 'Εικόνες' do
       f.has_many :images do |p|
-        p.input :file, label: 'Εικόνα', hint: p.template.image_tag(p.object.file.url(:thumb))
+        p.input :file, label: 'Εικόνα (680x540)', hint: p.template.image_tag(p.object.file.url(:thumb))
       end
     end
 
     f.inputs 'Πληροφορίες' do
-      f.input :title,       label: 'Τίτλος', hint: 'Με μικρά και τόνους'
+      f.input :title,       label: 'Τίτλος', hint: 'Με πεζά και τόνους'
       f.input :category,    label: 'Κατηγορία'
       f.input :link
       f.input :description, label: 'Περιγραφή',
