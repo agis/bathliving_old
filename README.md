@@ -13,6 +13,7 @@ TODO
 * Add indexes?
 * Remove unused image assets
 * 99% test coverage
+* Remove CkEditor completely(?)
 
 Consider
 --------------------
