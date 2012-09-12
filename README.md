@@ -12,6 +12,7 @@ TODO
 * Implement caching
 * Add indexes?
 * Remove unused image assets
+* 99% test coverage
 
 Consider
 --------------------
