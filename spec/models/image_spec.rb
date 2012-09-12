@@ -27,5 +27,5 @@ describe Image do
     @image.should_not be_valid
   end
 
-  it "is invalid with wrong size"
+  it "is invalid with wrong filesize"
 end

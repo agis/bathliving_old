@@ -1,5 +1,4 @@
 module PostHelper
-
   def main_image(post)
     if post.image?
       link_to post do
@@ -7,5 +6,4 @@ module PostHelper
       end
     end
   end
-
 end

@@ -13,6 +13,7 @@ gem 'date_validator', '~> 0.6.3'
 gem 'ui_datepicker-rails3'
 gem 'will_paginate'
 gem 'redcarpet'
+gem 'unicode_utils'
 
 group :development, :test do
   gem 'rspec-rails'

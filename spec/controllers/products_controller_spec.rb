@@ -17,7 +17,7 @@ describe ProductsController do
       response.should render_template 'index'
     end
 
-    it "populates an array of the categories"
+    it "populates a set of the categories"
   end
 
   describe "GET #show" do

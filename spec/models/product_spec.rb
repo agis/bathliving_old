@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 describe Product do
@@ -27,14 +29,21 @@ describe Product do
   end
 
   it "has a unique title" do
-    create(:product, title: 'hola')
-    @product.title = 'hola'
+    create(:product, title: 'Hola')
+    @product.title = 'Hola'
     @product.should_not be_valid
   end
 
   it "is invalid without a category" do
     @product.category = nil
     @product.should_not be_valid
+  end
+
+  it "has a titleized title" do
+    @product.title = 'τΕσΤ Δε ΤαΙτΛ'
+    @product.save
+
+    @product.title.should eq 'Τεστ Δε Ταιτλ'
   end
 
   it "has a proper link"

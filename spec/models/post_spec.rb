@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 describe Post do
@@ -21,7 +23,7 @@ describe Post do
   end
 
   it "has a unique title" do
-    FactoryGirl.create(:post, title: 'hola')
+    create(:post, title: 'hola')
     @post.title = 'hola'
     @post.should_not be_valid
   end
@@ -40,5 +42,12 @@ describe Post do
   it "has a valid publish date" do
     @post.publish_date = "a"
     @post.should_not be_valid
+  end
+
+  it "has a titleized title" do
+    @post.title = 'τΕσΤ Δε ΤαΙτΛ'
+    @post.save
+
+    @post.title.should eq 'Τεστ Δε Ταιτλ'
   end
 end

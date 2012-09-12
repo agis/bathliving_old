@@ -1,5 +1,7 @@
+# encoding: utf-8
+
 FactoryGirl.define do
   factory :product_category do |f|
-    f.title "Cabins"
+    f.title 'A Category Title'
   end
 end

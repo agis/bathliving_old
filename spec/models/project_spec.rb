@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 describe Project do
@@ -25,8 +27,8 @@ describe Project do
   end
 
   it "has a unique title" do
-    create(:project, title: 'hola')
-    @project.title = 'hola'
+    create(:project, title: 'Hola')
+    @project.title = 'Hola'
     @project.should_not be_valid
   end
 
@@ -36,5 +38,12 @@ describe Project do
 
     @project.images << invalid_image
     @project.should_not be_valid
+  end
+
+  it "has a titleized title" do
+    @project.title = 'τΕσΤ Δε ΤαΙτΛ'
+    @project.save
+
+    @project.title.should eq 'Τεστ Δε Ταιτλ'
   end
 end
