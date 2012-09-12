@@ -13,6 +13,7 @@ gem 'ui_datepicker-rails3'
 gem 'will_paginate'
 gem 'redcarpet'
 gem 'unicode_utils'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec-rails'
