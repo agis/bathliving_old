@@ -11,16 +11,8 @@ class Image < ActiveRecord::Base
                         size: { in: 0..600.kilobytes },
                         content_type: { content_type: 'image/jpeg' }
 
-  validate :file_dimensions
+  validates :file, dimensions: { width: 680, height: 540 }
 
-  private
-
-  def file_dimensions(width = 680, height = 540)
-    dimensions = Paperclip::Geometry.from_file(file.queued_for_write[:original].path)
-    unless dimensions.width == width && dimensions.height == height
-      errors.add :file, "Width must be #{width}px and height must be #{height}px"
-    end
-  end
 end
 
 # TODO: styles must depend on the parent object eg. Image or Project?

@@ -10,6 +10,7 @@ class Product < ActiveRecord::Base
 
   validates_uniqueness_of :title
   validates_presence_of :title, :description, :images, :category
+
   # TODO: implement link validator
 
   default_scope order("id DESC")
