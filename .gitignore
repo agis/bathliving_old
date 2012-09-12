@@ -16,4 +16,3 @@
 
 # Ignore paperclip attachments from development
 /public/system
-/public/ckeditor_assets
