@@ -13,13 +13,8 @@ class ProductsController < ApplicationController
   private
 
   def set_categories(products)
-    @categories = []
+    @categories = Set[]
 
-    products.each do |product|
-      unless @categories.include? product.category
-        @categories << product.category
-      end
-    end
+    products.each { |product| @categories << product.category }
   end
-
 end
