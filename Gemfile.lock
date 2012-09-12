@@ -62,9 +62,6 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
-    ckeditor (3.7.3)
-      mime-types
-      orm_adapter
     cocaine (0.3.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -226,7 +223,6 @@ DEPENDENCIES
   activeadmin (~> 0.5.0)
   aws-sdk (~> 1.6.5)
   capybara
-  ckeditor (~> 3.7.3)
   coffee-rails (~> 3.2.1)
   date_validator (~> 0.6.3)
   factory_girl_rails
