@@ -1,3 +1,5 @@
+# TODO: Implement image dimensions validator. Must validate only if image is present
+
 class Post < ActiveRecord::Base
   attr_accessible :title, :body, :publish_date, :image
 
@@ -14,7 +16,6 @@ class Post < ActiveRecord::Base
 
   private
 
-  # TODO: Implement validator only if the image is present
   # def file_dimensions(width = 680, height = 234)
   #   dimensions = Paperclip::Geometry.from_file(image.queued_for_write[:original].path)
   #   unless dimensions.width == width && dimensions.height == height

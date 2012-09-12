@@ -1,5 +1,7 @@
 <header class="page-header">
+
   <h1 class="page-title">Blog</h1>
+
 </header>
 
 <section id="main">
@@ -7,7 +9,7 @@
   <article class="entry single clearfix">
 
     <%= link_to @post do %>
-      <img src="img/placeholders/blog-post-1.jpg" alt="" class="entry-image">
+      <%= image_tag @post.image.url, class: "entry-image" %>
     <% end %>
 
     <div class="entry-body">
@@ -18,7 +20,7 @@
         </h1>
       </a>
 
-      <%= markdown(@post.body) %>
+      <%= markdown @post.body %>
 
     </div>
 
