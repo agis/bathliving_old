@@ -1,8 +1,6 @@
 <article class="entry clearfix">
 
-  <%= link_to post do %>
-    <%= image_tag post.image.url, class: "entry-image" %>
-  <% end %>
+  <%= main_image(post) %>
 
   <div class="entry-body">
     <%= link_to post do %>
