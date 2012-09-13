@@ -2,8 +2,9 @@ Images sizes
 ------------------
 * Product / Composition show:  680x540
 * Product thumb: 220x175
-* Project thumb: 460x311
+* Project thumb: 460x311 (project#index)
 * Post main: 680x234
+* Post home thumb: 220x76
 
 TODO
 ------------------------
