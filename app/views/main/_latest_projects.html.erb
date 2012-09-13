@@ -4,16 +4,16 @@
 
     <article class="slide">
 
-      <img src="img/placeholders/slider-slide-1.jpg" alt="" class="slide-bg-image" />
+      <%= image_tag project.slide_image.url, class: "slide-bg-image" %>
 
       <div class="slide-button">
         <span class="dropcap">1</span>
-        <h5>Responsive Layout</h5>
-        <span class="description">From desktop to mobile</span>
+        <h5><%= project.title %></h5>
+        <span class="description"><%= project.subtitle %></span>
       </div>
 
       <div class="slide-content">
-        <h2>Responsive Layout</h2>
+        <h2><%= project.title %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus justo.</p>
         <p><a class="button" href="#">Read More</a></p>
       </div>

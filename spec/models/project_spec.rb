@@ -8,11 +8,18 @@ describe Project do
   end
 
   it { should respond_to :title }
+  it { should respond_to :subtitle }
   it { should respond_to :description  }
   it { should respond_to :images }
+  it { should respond_to :slide_image }
 
   it "is invalid without a title" do
     @project.title = " "
+    @project.should_not be_valid
+  end
+
+  it "is invalid without a subtitle" do
+    @project.subtitle = " "
     @project.should_not be_valid
   end
 
@@ -23,12 +30,6 @@ describe Project do
 
   it "is invalid without images" do
     @project.images = []
-    @project.should_not be_valid
-  end
-
-  it "has a unique title" do
-    create(:project, title: 'Hola')
-    @project.title = 'Hola'
     @project.should_not be_valid
   end
 
@@ -45,5 +46,17 @@ describe Project do
     @project.save
 
     @project.title.should eq 'Τεστ Δε Ταιτλ'
+  end
+
+  it "has a titleized subtitle" do
+    @project.subtitle = 'τΕσΤ Δε ΤαΙτΛ'
+    @project.save
+
+    @project.subtitle.should eq 'Τεστ Δε Ταιτλ'
+  end
+
+  it "is invalid without a slide image" do
+    @project.slide_image = nil
+    @project.should_not be_valid
   end
 end

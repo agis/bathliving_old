@@ -21,8 +21,14 @@ ActiveAdmin.register Project do
 
       row :title
 
+      row :subtitle
+
       row 'Βασικη εικονα' do
         image_tag(project.images.first.file.url(:thumb))
+      end
+
+      row 'Εικoνα Slideshow' do
+        image_tag(project.slide_image.url(:thumb))
       end
 
       row 'Περιγραφη' do
@@ -40,12 +46,17 @@ ActiveAdmin.register Project do
   form multipart: true do |f|
     f.inputs "Εικόνες" do
       f.has_many :images do |p|
-        p.input :file, label: 'Εικόνα (680x540)', hint: p.template.image_tag(p.object.file.url(:thumb))
+        p.input :file, label: 'Εικόνα 680x540', hint: p.template.image_tag(p.object.file.url(:thumb))
       end
     end
 
+    f.inputs "Εικόνα Slideshow (αρχική)" do
+      f.input :slide_image, label: 'Εικόνα 940x380', hint: image_tag(f.object.slide_image.url(:thumb))
+    end
+
     f.inputs "Πληροφορίες" do
-      f.input :title,       label: 'Τίτλος',    hint: 'Με μικρά και τόνους'
+      f.input :title,       label: 'Τίτλος',    hint: 'π.χ. Απαλές Αποχρώσεις'
+      f.input :subtitle,    label: 'Υπότιτλος', hint: 'π.χ. Κατοικία στη Σάμο'
       f.input :description, label: 'Περιγραφή',
                             hint:   markdown_link
     end
