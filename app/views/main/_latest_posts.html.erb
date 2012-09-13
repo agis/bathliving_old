@@ -1,0 +1,35 @@
+<h6 class="section-title">Απο το blog</h6>
+
+<ul class="post-carousel">
+
+  <%= @posts.each do |post| %>
+
+    <li>
+
+     <%= main_image(post, :home_thumb) %>
+
+      <div class="entry-meta">
+
+        <%= link_to post do %>
+          <span class="post-format">Permalink</span>
+        <% end %>
+
+        <span class="date"><%= publish_date(post) %></span>
+
+      </div>
+
+      <div class="entry-body">
+
+        <%= link_to post do %>
+          <h5 class="title"><%= post.title %></h5>
+        <% end %>
+
+        <%= post.body %>
+
+      </div>
+
+    </li>
+
+  <% end %>
+
+</ul>

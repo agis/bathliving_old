@@ -1,0 +1,19 @@
+<h6 class="section-title">Τελευταια προϊοντα</h6>
+
+<ul class="projects-carousel clearfix">
+
+  <% @products.each do |product| %>
+
+    <li>
+
+      <%= link_to product do %>
+        <%= image_tag product.images.first.file.url(:thumb) %>
+        <h5 class="title"><%= product.title %></h5>
+        <span class="categories"><%= product.category.title %></span>
+      <% end %>
+
+    </li>
+
+  <% end %>
+
+</ul>
