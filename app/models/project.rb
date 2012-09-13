@@ -8,7 +8,7 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :title, :subtitle, :slide_image, :description, :images
   validates_attachment :slide_image, presence: true
-  validates :slide_image, dimensions: { width: 940, height: 380 }
+  # validates :slide_image, dimensions: { width: 940, height: 380 }
 
   accepts_nested_attributes_for :images, allow_destroy: true
 

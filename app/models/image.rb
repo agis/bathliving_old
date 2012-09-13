@@ -11,7 +11,7 @@ class Image < ActiveRecord::Base
                         size: { in: 0..600.kilobytes },
                         content_type: { content_type: 'image/jpeg' }
 
-  validates :file, dimensions: { width: 680, height: 540 }
+  # validates :file, dimensions: { width: 680, height: 540 }
 
 end
 
