@@ -4,9 +4,9 @@ class DimensionsValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     if record.send("#{attribute}?".to_sym)
       begin
-        dimensions = Paperclip::Geometry.from_file(value.queued_for_write[:original].path)
-      rescue
         dimensions = Paperclip::Geometry.from_file(value.path)
+      rescue
+        dimensions = Paperclip::Geometry.from_file(value.queued_for_write[:original].path)
       end
       width = options[:width]
       height = options[:height]
