@@ -14,8 +14,8 @@
 
       <div class="slide-content">
         <h2><%= project.title %></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus justo.</p>
-        <p><a class="button" href="#">Read More</a></p>
+        <%= project.description %>
+        <p><%= link_to "Περισσότερες πληροφορίες", project, class: "button" %></p>
       </div>
 
     </article>
