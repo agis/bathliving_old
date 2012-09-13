@@ -9,11 +9,10 @@ TODO
 ------------------------
 * Change the locale to el-GR
 * Measure performance
-* Implement caching
+* Implement caching (memcached+dalli)
 * Add indexes?
 * Remove unused image assets
 * 99% test coverage
-* Remove CkEditor completely(?)
 
 Consider
 --------------------
