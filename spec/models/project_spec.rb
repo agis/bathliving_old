@@ -33,14 +33,6 @@ describe Project do
     @project.should_not be_valid
   end
 
-  it "is invalid if it contains an invalid image" do
-    invalid_image = build(:image)
-    invalid_image.file = File.new("spec/fixtures/image/content-type.gif")
-
-    @project.images << invalid_image
-    @project.should_not be_valid
-  end
-
   it "has a titleized title" do
     @project.title = 'τΕσΤ Δε ΤαΙτΛ'
     @project.save
@@ -55,8 +47,22 @@ describe Project do
     @project.subtitle.should eq 'Τεστ Δε Ταιτλ'
   end
 
-  it "is invalid without a slide image" do
-    @project.slide_image = nil
-    @project.should_not be_valid
+  context "slide image" do
+
+    it "is invalid without a slide image" do
+      @project.slide_image = nil
+      @project.should_not be_valid
+    end
+
+    it "is invalid with a wrong content-type image" do
+      @project.slide_image = File.new("spec/fixtures/image/wrong-content-type.gif")
+      @project.should_not be_valid
+    end
+
+    it "is invalid with a wrong-dimensions image" do
+      @project.slide_image = File.new("spec/fixtures/image/wrong-dimensions.jpg")
+      @project.should_not be_valid
+    end
+
   end
 end
