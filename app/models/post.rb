@@ -9,7 +9,6 @@ class Post < ActiveRecord::Base
   validates_uniqueness_of :title, :body
 
   validates :publish_date, date: true
-  # validates :image, dimensions: { width: 680, height: 234 }
 
   scope :published, where("publish_date <= ?", Date.current).order("publish_date DESC")
 

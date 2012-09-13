@@ -10,9 +10,6 @@ class Image < ActiveRecord::Base
                         presence: true,
                         size: { in: 0..600.kilobytes },
                         content_type: { content_type: 'image/jpeg' }
-
-  # validates :file, dimensions: { width: 680, height: 540 }
-
 end
 
 # TODO: styles must depend on the parent object eg. Image or Project?

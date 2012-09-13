@@ -59,10 +59,10 @@ describe Project do
       @project.should_not be_valid
     end
 
-    it "is invalid with a wrong-dimensions image" do
-      @project.slide_image = File.new("spec/fixtures/image/wrong-dimensions.jpg")
-      @project.should_not be_valid
-    end
+    # it "is invalid with a wrong-dimensions image" do
+    #   @project.slide_image = File.new("spec/fixtures/image/wrong-dimensions.jpg")
+    #   @project.should_not be_valid
+    # end
 
   end
 end
