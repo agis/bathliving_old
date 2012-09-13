@@ -6,8 +6,13 @@ class Project < ActiveRecord::Base
   has_many :images, as: :imageable
   has_attached_file :slide_image, styles: { thumb: '298x120#' }
 
-  validates_presence_of :title, :subtitle, :slide_image, :description, :images
-  validates_attachment :slide_image, presence: true
+  validates_presence_of :title, :subtitle, :description, :images
+
+  validates_attachment :slide_image,
+                           presence: true,
+                           size: { in: 0..600.kilobytes },
+                           content_type: { content_type: 'image/jpeg' }
+
   # validates :slide_image, dimensions: { width: 940, height: 380 }
 
   accepts_nested_attributes_for :images, allow_destroy: true
