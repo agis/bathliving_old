@@ -24,7 +24,7 @@
           <h5 class="title"><%= post.title %></h5>
         <% end %>
 
-        <%= post.body %>
+        <%= markdown(smart_truncate(post.body)) %>
 
       </div>
 
