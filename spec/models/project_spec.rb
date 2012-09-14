@@ -33,20 +33,6 @@ describe Project do
     @project.should_not be_valid
   end
 
-  it "has a titleized title" do
-    @project.title = 'τΕσΤ Δε ΤαΙτΛ'
-    @project.save
-
-    @project.title.should eq 'Τεστ Δε Ταιτλ'
-  end
-
-  # it "has a titleized subtitle" do
-  #   @project.subtitle = 'τΕσΤ Δε ΤαΙτΛ'
-  #   @project.save
-
-  #   @project.subtitle.should eq 'Τεστ Δε Ταιτλ'
-  # end
-
   context "slide image" do
 
     it "is invalid without a slide image" do

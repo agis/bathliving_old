@@ -19,11 +19,4 @@ describe ProductCategory do
     @category.title = 'Hola'
     @category.should_not be_valid
   end
-
-  it "has a titleized title" do
-    @category.title = 'τΕσΤ Δε ΤαΙτΛ'
-    @category.save
-
-    @category.title.should eq 'Τεστ Δε Ταιτλ'
-  end
 end

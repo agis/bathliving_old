@@ -43,11 +43,4 @@ describe Post do
     @post.publish_date = "a"
     @post.should_not be_valid
   end
-
-  # it "has a titleized title" do
-  #   @post.title = 'τΕσΤ Δε ΤαΙτΛ'
-  #   @post.save
-
-  #   @post.title.should eq 'Τεστ Δε Ταιτλ'
-  # end
 end
