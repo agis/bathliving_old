@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 ActiveAdmin.register Post do
-  menu label: "Άρθρα", priority: 3
+  menu label: "Blog", priority: 3
 
   index do
     column :id
