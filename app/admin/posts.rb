@@ -54,12 +54,12 @@ ActiveAdmin.register Post do
 
     def create
       expire_action controller: '/main', action: 'home'
-      update!
+      create!
     end
 
     def destroy
       expire_action controller: '/main', action: 'home'
-      update!
+      destroy!
     end
   end
 end
