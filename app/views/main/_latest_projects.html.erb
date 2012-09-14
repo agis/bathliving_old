@@ -15,7 +15,7 @@
 
       <div class="slide-content">
         <h2><%= project.title %></h2>
-        <%= markdown(smart_truncate(project.description)) %>
+        <%= markdown(project.description) %>
         <p><%= link_to 'Περισσότερα ›', project, class: "button" %></p>
       </div>
 
