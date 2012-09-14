@@ -47,10 +47,7 @@ ActiveAdmin.register Post do
   end
 
   controller do
-    def update
-      expire_action controller: '/main', action: 'home'
-      update!
-    end
+
 
     def create
       expire_action controller: '/main', action: 'home'
