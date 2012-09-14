@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 
   validates :publish_date, date: true
 
-  scope :published, where("publish_date <= ?", Date.current).order("publish_date DESC")
+  scope :published, -> { where("publish_date <= ?", Date.today).order("publish_date DESC") }
 
   before_save do |p|
     p.title = UnicodeUtils.titlecase(p.title)

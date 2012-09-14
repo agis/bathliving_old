@@ -5,9 +5,10 @@ ActiveAdmin.register Post do
 
   index do
     column :id
-    column 'Τίτλος',              :title
-    column 'Δημιουργήθηκε στις',  :created_at
-    column 'Ανανεώθηκε στις',     :updated_at
+    column 'Τίτλος',               :title
+    column 'Ημερ/νία δημοσίευσης', :publish_date
+    column 'Δημιουργήθηκε στις',   :created_at
+    column 'Ανανεώθηκε στις',      :updated_at
     default_actions
   end
 
@@ -43,5 +44,22 @@ ActiveAdmin.register Post do
     end
 
     f.actions
+  end
+
+  controller do
+    def update
+      expire_action controller: '/main', action: 'home'
+      update!
+    end
+
+    def create
+      expire_action controller: '/main', action: 'home'
+      update!
+    end
+
+    def destroy
+      expire_action controller: '/main', action: 'home'
+      update!
+    end
   end
 end
