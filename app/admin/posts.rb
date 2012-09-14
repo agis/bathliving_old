@@ -47,15 +47,24 @@ ActiveAdmin.register Post do
   end
 
   controller do
-
+    def update
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/posts', action: 'index'
+      expire_action controller: '/posts', action: 'show'
+      update!
+    end
 
     def create
       expire_action controller: '/main', action: 'home'
+      expire_action controller: '/posts', action: 'index'
+      expire_action controller: '/posts', action: 'show'
       create!
     end
 
     def destroy
       expire_action controller: '/main', action: 'home'
+      expire_action controller: '/posts', action: 'index'
+      expire_action controller: '/posts', action: 'show'
       destroy!
     end
   end

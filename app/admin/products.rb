@@ -58,4 +58,27 @@ ActiveAdmin.register Product do
 
     f.actions
   end
+
+  controller do
+    def update
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/products', action: 'index'
+      expire_action controller: '/products', action: 'show'
+      update!
+    end
+
+    def create
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/products', action: 'index'
+      expire_action controller: '/products', action: 'show'
+      create!
+    end
+
+    def destroy
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/products', action: 'index'
+      expire_action controller: '/products', action: 'show'
+      destroy!
+    end
+  end
 end

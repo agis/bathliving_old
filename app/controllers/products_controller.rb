@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  caches_action :index, :show
+
   def index
     @products = Product.limit(16)
     set_categories(@products)

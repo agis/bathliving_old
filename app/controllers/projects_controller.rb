@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  caches_action :index, :show
+
   def index
     @projects = Project.limit(12)
   end

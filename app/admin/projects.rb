@@ -63,4 +63,27 @@ ActiveAdmin.register Project do
 
     f.actions
   end
+
+  controller do
+    def update
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/projects', action: 'index'
+      expire_action controller: '/projects', action: 'show'
+      update!
+    end
+
+    def create
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/projects', action: 'index'
+      expire_action controller: '/projects', action: 'show'
+      create!
+    end
+
+    def destroy
+      expire_action controller: '/main', action: 'home'
+      expire_action controller: '/projects', action: 'index'
+      expire_action controller: '/projects', action: 'show'
+      destroy!
+    end
+  end
 end
