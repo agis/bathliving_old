@@ -1,5 +1,3 @@
-require 'unicode_utils/titlecase'
-
 class Project < ActiveRecord::Base
   attr_accessible :title, :subtitle, :description, :images, :images_attributes, :slide_image
 
@@ -16,9 +14,4 @@ class Project < ActiveRecord::Base
 
 
   default_scope order("id DESC")
-
-  before_save do |p|
-    p.title = UnicodeUtils.titlecase(p.title)
-    p.subtitle = UnicodeUtils.titlecase(p.subtitle)
-  end
 end

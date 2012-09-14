@@ -40,12 +40,12 @@ describe Project do
     @project.title.should eq 'Τεστ Δε Ταιτλ'
   end
 
-  it "has a titleized subtitle" do
-    @project.subtitle = 'τΕσΤ Δε ΤαΙτΛ'
-    @project.save
+  # it "has a titleized subtitle" do
+  #   @project.subtitle = 'τΕσΤ Δε ΤαΙτΛ'
+  #   @project.save
 
-    @project.subtitle.should eq 'Τεστ Δε Ταιτλ'
-  end
+  #   @project.subtitle.should eq 'Τεστ Δε Ταιτλ'
+  # end
 
   context "slide image" do
 

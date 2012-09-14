@@ -12,7 +12,6 @@ gem 'date_validator', '~> 0.6.3'
 gem 'ui_datepicker-rails3'
 gem 'will_paginate'
 gem 'redcarpet'
-gem 'unicode_utils'
 gem 'dalli'
 # gem 'newrelic_rpm' -> WAIT FOR THE UPDATE TO COME OUT
 

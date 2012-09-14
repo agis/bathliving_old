@@ -12,7 +12,7 @@ TODO
 * Implement image dimension validator
 * Change the locale to el-GR
 * Measure performance
-* Implement caching (memcached+dalli)
+* Implement fragment caching
 * Add indexes?
 * Remove unused image assets
 * 99% test coverage

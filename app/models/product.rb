@@ -1,5 +1,3 @@
-require 'unicode_utils/titlecase'
-
 class Product < ActiveRecord::Base
   attr_accessible :title, :description,
                   :images, :images_attributes,
@@ -14,10 +12,6 @@ class Product < ActiveRecord::Base
   validates_presence_of :title, :description, :images, :category
 
   default_scope order("id DESC")
-
-  before_save do |p|
-    p.title = UnicodeUtils.titlecase(p.title)
-  end
 end
 
 # TODO: implement link validator

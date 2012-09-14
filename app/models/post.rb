@@ -1,5 +1,3 @@
-require 'unicode_utils/titlecase'
-
 class Post < ActiveRecord::Base
   attr_accessible :title, :body, :publish_date, :image
 
@@ -11,8 +9,4 @@ class Post < ActiveRecord::Base
   validates :publish_date, date: true
 
   scope :published, -> { where("publish_date <= ?", Date.today).order("publish_date DESC") }
-
-  before_save do |p|
-    p.title = UnicodeUtils.titlecase(p.title)
-  end
 end

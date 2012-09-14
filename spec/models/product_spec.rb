@@ -39,12 +39,12 @@ describe Product do
     @product.should_not be_valid
   end
 
-  it "has a titleized title" do
-    @product.title = 'τΕσΤ Δε ΤαΙτΛ'
-    @product.save
+  # it "has a titleized title" do
+  #   @product.title = 'τΕσΤ Δε ΤαΙτΛ'
+  #   @product.save
 
-    @product.title.should eq 'Τεστ Δε Ταιτλ'
-  end
+  #   @product.title.should eq 'Τεστ Δε Ταιτλ'
+  # end
 
   it "has a proper link"
 end

@@ -44,10 +44,10 @@ describe Post do
     @post.should_not be_valid
   end
 
-  it "has a titleized title" do
-    @post.title = 'τΕσΤ Δε ΤαΙτΛ'
-    @post.save
+  # it "has a titleized title" do
+  #   @post.title = 'τΕσΤ Δε ΤαΙτΛ'
+  #   @post.save
 
-    @post.title.should eq 'Τεστ Δε Ταιτλ'
-  end
+  #   @post.title.should eq 'Τεστ Δε Ταιτλ'
+  # end
 end
