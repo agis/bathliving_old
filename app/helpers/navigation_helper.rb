@@ -1,6 +1,10 @@
 module NavigationHelper
   # OPTIMIZE: improve this. See also layouts/_header.html.erb
-  def current_controller(name)
-    raw('class="current"') if controller_name == name.to_s
+  def current(controller, action = nil)
+    if action
+      ('class="current"').html_safe if controller_name == controller.to_s && action_name == action.to_s
+    else
+      ('class="current"').html_safe if controller_name == controller.to_s
+    end
   end
 end

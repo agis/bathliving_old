@@ -7,23 +7,23 @@
   <nav id="main-nav">
 
     <ul>
-      <li <%= current_controller('main') %>>
+      <li <%= current :main, :home %>>
         <%= link_to 'Αρχικη', root_path %>
       </li>
 
-      <li <%= current_controller('products') %>>
+      <li <%= current :products %>>
         <%= link_to 'Προϊοντα', products_path %>
       </li>
 
-      <li <%= current_controller('projects') %>>
+      <li <%= current :projects %>>
         <%= link_to 'Projects', projects_path %>
       </li>
 
-      <li <%= current_controller('posts') %>>
+      <li <%= current :posts %>>
         <%= link_to 'Blog', posts_path %>
       </li>
 
-      <li>
+      <li <%= current :main, :contact %>>
         <%= link_to 'Επικοινωνια', contact_path %>
       </li>
 
