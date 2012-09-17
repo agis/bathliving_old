@@ -70,7 +70,7 @@ Bathliving::Application.configure do
     address:               'smtp.gmail.com',
     port:                  587,
     user_name:             'corestudiosinc@gmail.com',
-    password:              'ib35@82i',
+    password:              ENV['GMAIL_PASS'],
     authentication:        'plain',
     enable_starttls_auto:  true
   }
