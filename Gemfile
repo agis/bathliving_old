@@ -15,6 +15,7 @@ gem 'redcarpet'
 gem 'dalli'
 gem 'mail_form'
 gem 'simple_form'
+gem 'rails-i18n'
 # gem 'newrelic_rpm' -> WAIT FOR THE UPDATE TO COME OUT
 
 group :development, :test do

@@ -10,7 +10,6 @@ Images sizes
 TODO
 ------------------------
 * Implement image dimension validator
-* Change the locale to el-GR
 * Measure performance
 * Implement fragment caching
 * Add indexes?
