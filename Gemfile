@@ -13,6 +13,8 @@ gem 'ui_datepicker-rails3'
 gem 'will_paginate'
 gem 'redcarpet'
 gem 'dalli'
+gem 'mail_form'
+gem 'simple_form'
 # gem 'newrelic_rpm' -> WAIT FOR THE UPDATE TO COME OUT
 
 group :development, :test do

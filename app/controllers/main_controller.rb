@@ -7,9 +7,5 @@ class MainController < ApplicationController
     @posts = Post.published.limit(8)
   end
 
-  def contact
-  end
-
-  def about
-  end
+  def about; end
 end

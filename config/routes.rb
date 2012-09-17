@@ -3,11 +3,12 @@ Bathliving::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  get '/contact' => 'main#contact'
-
-  resources :posts,        only: [:show, :index]
-  resources :products,     only: [:show, :index]
-  resources :projects,     only: [:show, :index]
-
   root to: 'main#home'
+
+  get '/contact' => 'ContactForms#new'
+
+  resources :posts,         only: [:show, :index]
+  resources :products,      only: [:show, :index]
+  resources :projects,      only: [:show, :index]
+  resources :contact_forms, only: [:new, :create]
 end

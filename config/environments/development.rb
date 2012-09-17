@@ -12,7 +12,6 @@ Bathliving::Application.configure do
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-  config.cache_store = :dalli_store
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
@@ -38,4 +37,10 @@ Bathliving::Application.configure do
 
   # Paperclip must where ImageMagick is installed
   Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => "localhost",
+    :port => 1025
+  }
 end
