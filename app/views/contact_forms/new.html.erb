@@ -1,8 +1,31 @@
- <%= simple_form_for @contact_form do |f| %>
-    <%= f.input :name, :required => false %>
-    <%= f.input :email, :required => false %>
-    <%= f.input :message, :as => :text, :required => false %>
+<div class="container clearfix">
 
-    <div class="hidden"><%= f.input :nickname, :hint => 'Leave this field blank!' %></div>
-    <%= f.button :submit, 'Send message' %>
+  <div class="one-fourth">
+
+    <h3>Στοιχεία Επικοινωνίας</h3>
+
+    <p>Σίνδος, (Β' είσοδος)<br/>
+    Βιομηχανική περιοχή<br/>
+    Θεσσαλονίκη, 57022</p>
+
+      <p>Τηλέφωνο: 2310 570-567<br/>
+      Email: talk (παπάκι) bathliving.gr<br/>
+      Web: bathliving.gr</p>
+
+  </div>
+
+  <div class="three-fourth last">
+
+    <h3>Φόρμα μηνύματος</h3>
+
+    <%= simple_form_for @contact_form do |f| %>
+      <p class="input-block"><%= f.input :name, label: 'Όνομα', :required => false %></p>
+      <p class="input-block"><%= f.input :email, label: 'Email', :required => false %></p>
+      <p class="input-block"><%= f.input :message, label: 'Μήνυμα', :as => :text, :required => false %></p>
+      <div class="hidden"><%= f.input :nickname, :hint => 'Αφήστε αυτό το πεδίο κενό!' %></div>
+      <%= f.button :submit, 'Αποστολη' %>
     <% end %>
+
+  </div>
+
+</div>

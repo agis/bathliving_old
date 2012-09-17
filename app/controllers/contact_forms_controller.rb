@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class ContactFormsController < ApplicationController
   def new
     @contact_form = ContactForm.new
@@ -8,12 +10,12 @@ class ContactFormsController < ApplicationController
       @contact_form = ContactForm.new(params[:contact_form])
       @contact_form.request = request
       if @contact_form.deliver
-        flash.now[:notice] = 'Thank you for your message!'
+        flash.now[:notice] = 'Ευχαριστούμε για το μήνυμά σας!'
       else
         render :new
       end
     rescue ScriptError
-      flash[:error] = 'Sorry, this message appears to be spam and was not delivered.'
+      flash[:error] = 'Λυπούμαστε. Αυτό το μήνυμα θεωρείται spam και δε μπορεί να παραδοθεί.'
     end
   end
 end
