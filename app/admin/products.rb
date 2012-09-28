@@ -70,7 +70,6 @@ ActiveAdmin.register Product do
     def create
       expire_action controller: '/main', action: 'home'
       expire_action controller: '/products', action: 'index'
-      expire_action controller: '/products', action: 'show'
       create!
     end
 

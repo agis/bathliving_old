@@ -75,7 +75,6 @@ ActiveAdmin.register Project do
     def create
       expire_action controller: '/main', action: 'home'
       expire_action controller: '/projects', action: 'index'
-      expire_action controller: '/projects', action: 'show', id: params[:id]
       create!
     end
 
